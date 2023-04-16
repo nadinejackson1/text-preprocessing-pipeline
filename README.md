@@ -4,36 +4,36 @@ This repository contains a basic text preprocessing pipeline, which includes tok
 
 ### Getting Started
 
-To use this pipeline, follow these steps:
+Define the preprocess function, which takes in a string of text and returns the preprocessed text as a list of stemmed tokens with stopwords removed:
 
-1. Clone the repository:
-              
-              
-         git clone https://github.com/nadinejackson1/100DaysofML-Day8.git
+    def preprocess(text):
+        # Convert the text to lowercase
+        text = text.lower()
 
-2. Navigate to the project directory:
-              
-              
-         cd 100DaysofML-Day8
-         
-3. Install the required dependencies:
-              
-              
-         pip install -r requirements.txt
+        # Tokenize the text into individual words
+        words = word_tokenize(text)
+
+        # Remove the stopwords
+        words = [word for word in words if word not in stopwords.words('english')]
+
+        # Apply stemming to the words
+        stemmer = PorterStemmer()
+        words = [stemmer.stem(word) for word in words]
+
+        return words
 
 ### Usage
 
-To use the text preprocessing pipeline, simply import the preprocess function from the pipeline module and pass in your text as an argument:
-
-    from pipeline import preprocess
+To use the text preprocessing pipeline in your Colab notebook, simply call the preprocess function and pass in your text as a string:
 
     text = "I love machine learning and natural language processing!"
     processed_text = preprocess(text)
-
     print(processed_text)
 
-This will return the preprocessed text as a list of stemmed tokens with stopwords removed, like so:
+This will output the preprocessed text as a list of stemmed tokens with stopwords removed:
 
     ['love', 'machin', 'learn', 'natur', 'languag', 'process']
 
-Feel free to contribute to this project and improve the pipeline by adding more features or enhancing the existing ones. Happy coding!
+### Contributing
+
+Feel free to contribute to this project and improve the pipeline by adding more features or enhancing the existing ones. To contribute, simply fork this repository, make your changes, and submit a pull request. Happy coding!
