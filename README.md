@@ -9,7 +9,7 @@ To use this pipeline, follow these steps:
 1. Clone the repository:
               
               
-         git clone https://github.com/yourusername/text-preprocessing-pipeline.git
+         git clone https://github.com/nadinejackson1/text-preprocessing-pipeline.git
 
 2. Navigate to the project directory:
               
