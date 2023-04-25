@@ -1,3 +1,5 @@
+### 100 Days of Machine Learning - Day 8
+
 # Text Preprocessing Pipeline
 
 This repository contains a basic text preprocessing pipeline, which includes tokenization, stemming, and stopword removal. These steps are essential in many natural language processing tasks, and my goal is to provide a simple, easy-to-use tool for these purposes.
